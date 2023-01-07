@@ -36,3 +36,14 @@ This script should work fine on any other operating system. No need to make any 
 ![Plex Subtitle Dropdown](https://i.imgur.com/BNOlwtL.png)
 ##### PlexPreferNonForcedSubs.py script in action:
 ![PlexPreferNonForcedSubs.py Script in Action](https://i.imgur.com/2l6DuU6.png)
+
+## Donations:
+Like this script? Buy me a coffee! ☕ <br>
+Want to more scripts like this? Contact me on [Twitter](https://twitter.com/RileyxBell) <br>
+__Cashapp__: $rileyxx <br>
+__Venmo__: @CrispyBagel <br>
+__Amazon wishlist__: https://www.amazon.com/hz/wishlist/ls/WURF5NWZ843U <br>
+__Bitcoin__: 32r85q3GV1ghAgAFNJ2e4tAxK176BN1Zwq <br>
+__Monero__: 43841oakvAXNUVgpMG8iqnPWUiMSQBMoEaeKRvNqzjBcenpcWXuD9hFXCtbB5fpVoNURU11NfVgH9bnxDWGhawHq1pu4JeZ <br>
+__Ethereum__: 0xFA264dFF8db79C30fF006479c2f6023f9860B0B8 <br>
+
