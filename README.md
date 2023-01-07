@@ -1,4 +1,4 @@
-# PlexDefaultSubtitleChanger
+# PlexPreferNonForcedSubs
 
 
 ## Short description:
