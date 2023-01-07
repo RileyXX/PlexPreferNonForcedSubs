@@ -12,7 +12,7 @@ This script is confirmed tested and working. Feel free to use this code for your
 ## Instructions:
 ##### Windows:
 To use this script on Windows. Simply install latest version of [Python](https://www.python.org/downloads/). 
-1. Download the .py script from the [repository](https://github.com/RileyXX/PlexDefaultSubtitleChanger/blob/main/PlexPreferNonForcedSubs.py). 
+1. Download the latest .py script from the [releases](https://github.com/RileyXX/PlexDefaultSubtitleChanger/releases) page. 
 2. Replace xxxxxxx in the script with your [plex api token](https://www.plexopedia.com/plex-media-server/general/plex-token/).
 3. Make sure Plex media server is running locally then run the script and watch it work its magic.
 
