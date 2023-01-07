@@ -24,7 +24,7 @@ This script should work fine on any other operating system. No need to make any 
 * [Reddit](https://www.reddit.com/r/PleX/comments/105gdh7/python_code_to_set_all_movies_and_shows_in_plex/)
 
 ## Screenshots:
-##### Plex Subtitle Dropdown:
+##### Plex subtitle dropdown after script is done running:
 ![Plex Subtitle Dropdown](https://i.imgur.com/BNOlwtL.png)
-##### PlexPreferNonForcedSubs.py Script in Action:
+##### PlexPreferNonForcedSubs.py script in action:
 ![PlexPreferNonForcedSubs.py Script in Action](https://i.imgur.com/2l6DuU6.png)
