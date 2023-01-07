@@ -9,6 +9,13 @@ This script was created with the help of [ChatGPT Open AI](https://chat.openai.c
 
 This script is confirmed tested and working. Feel free to use this code for your own purposes. I will be running this code periodically on my home server along with some of my other neat little plex scripts like [Plex Auto Delete](https://github.com/Casvt/Plex-scripts/blob/main/changing_settings/plex_auto_delete.py). Thanks to [all](https://stackoverflow.com/questions/75027919/python-script-to-set-all-subtitles-for-movies-shows-in-plex-to-english-non-for) who helped! If you use this script and run into any bugs feel free to open an issue. Cheers!
 
+## What are non-forced subtitles?
+Non-forced subtitles provide subtitles everytime a characters speaks.
+
+## What are forced subtitles?
+Forced subtitles only provide subtitles when the characters speak a foreign or alien language.
+
+
 ## Instructions:
 ##### Windows:
 To use this script on Windows. Simply install latest version of [Python](https://www.python.org/downloads/). 
