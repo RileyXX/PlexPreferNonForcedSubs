@@ -29,7 +29,7 @@ This script should work fine on any other operating system. No need to make any 
 ## Known issues/future outlook:
 * Forced subs without the "forced" tag will be treated as non forced subs. This could be fixed in the script by checking the subtitle "title" tag for some variation of the word "forced". 
 * [Python-PlexAPI](https://python-plexapi.readthedocs.io/en/latest/modules/media.html#plexapi.media.MediaPart.setDefaultSubtitleStream) has a method to set the default subtitle stream. No need to manually call the API using requests. 
-* Several lines of redundant code can be shorted and/or removed
+* Several lines of redundant code can be shortened and/or removed
 * Plans to print out neat colored data tables when the script runs
 
 ## Also posted on:
