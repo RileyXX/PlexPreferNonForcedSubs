@@ -26,7 +26,7 @@ for movie in plex.library.section('Movies').all():
         requests.put(url, headers=headers)
         print(f'{movie.title}: Setting non forced English subtitles.')
     elif non_forced_english_subs and not forced_english_subs:
-        print(f'{movie.title}: Has english subtitles but no english forced subtitles. No subtitle changes.')
+        print(f'{movie.title}: Has English subtitles but no English forced subtitles. No subtitle changes.')
     elif not non_forced_english_subs and not forced_english_subs and not forced_english_subs:
         print(f'{movie.title}: No English subtitles found. No subtitle changes.')
     else:
@@ -52,7 +52,7 @@ for show in plex.library.section('TV Shows').all():
             requests.put(url, headers=headers)
             print(f'{show.title} - {episode.title}: Setting non forced English subtitles.')
         elif non_forced_english_subs and not forced_english_subs:
-            print(f'{show.title} - {episode.title}: Has english subtitles but no english forecd subtitles. No subtitle changes.')
+            print(f'{show.title} - {episode.title}: Has English subtitles but no english forced subtitles. No subtitle changes.')
         elif not non_forced_english_subs and not forced_english_subs and not forced_english_subs:
             print(f'{show.title} - {episode.title}: No English subtitles found. No subtitle changes.')
         else:
