@@ -1,4 +1,4 @@
-# PlexPreferNonForcedSubs
+ccccc# PlexPreferNonForcedSubs
 
 
 ## Short description:
@@ -47,7 +47,7 @@ This script should work fine on any other operating system. No need to make any 
 Like this script? Buy me a coffee! ☕ <br>
 Want to more scripts like this? Contact me on [Twitter](https://twitter.com/RileyxBell) <br>
 __Cashapp__: $rileyxx <br>
-__Venmo__: @CrispyBagel <br>
+__Venmo__: @rileyxx <br>
 __Amazon wishlist__: https://www.amazon.com/hz/wishlist/ls/WURF5NWZ843U <br>
 __Bitcoin__: 32r85q3GV1ghAgAFNJ2e4tAxK176BN1Zwq <br>
 __Monero__: 43841oakvAXNUVgpMG8iqnPWUiMSQBMoEaeKRvNqzjBcenpcWXuD9hFXCtbB5fpVoNURU11NfVgH9bnxDWGhawHq1pu4JeZ <br>
