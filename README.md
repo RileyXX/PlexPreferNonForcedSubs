@@ -47,7 +47,7 @@ This script should work fine on any other operating system. No need to make any 
 ## Donations:
 Like my scripts? Consider donating! Become a sponsor and support my projects! See below for other donation options. Need help with a project? Open an issue and I will try my best to help! For other inquiries and custom projects contact me on [Twitter](https://twitter.com/RileyxBell).
 
-More donation options:
+#### More donation options:
 - Cashapp: `$rileyxx`
 - Venmo: `@rileyxx`
 - Bitcoin: `bc1qrjevwqv49z8y77len3azqfghxrjmrjvhy5zqau`
