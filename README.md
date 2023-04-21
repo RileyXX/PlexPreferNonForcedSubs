@@ -45,7 +45,7 @@ This script should work fine on any other operating system. No need to make any 
 ![PlexPreferNonForcedSubs.py Script in Action](https://i.imgur.com/2l6DuU6.png)
 
 ## Donations, Sponsorships and Custom Projects:
-Like my scripts? Consider donating! Become a sponsor and support my projects! See below for other donation options. Need help with a project? Open an issue and I will try my best to help! For other inquiries and custom projects contact me on [Twitter](https://twitter.com/RileyxBell).
+Like my scripts? Become a [sponsor](https://github.com/sponsors/RileyXX) and support my projects! See below for other donation options. Need help with a project? Open an issue and I will try my best to help! For other inquiries and custom projects contact me on [Twitter](https://twitter.com/RileyxBell).
 
 #### More donation options:
 - Cashapp: `$rileyxx`
