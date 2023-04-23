@@ -1,8 +1,6 @@
 from plexapi.server import PlexServer
 import requests
 import xml.etree.ElementTree as ET
-#import pdb             //enable for debugging
-#pdb.set_trace()       //insert where to start debugging, press n to proceed to next line
 
 # Connect to the Plex server
 baseurl = 'http://localhost:32400'
@@ -57,6 +55,3 @@ for show in plex.library.section('TV Shows').all():
             print(f'{show.title} - {episode.title}: No English subtitles found. No subtitle changes.')
         else:
             print(f'{show.title} - {episode.title}: No subtitle changes.')
-
-
-#input("Press [Enter] to continue.")      //enable to stop window from closing on completion
