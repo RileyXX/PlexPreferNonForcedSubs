@@ -7,7 +7,6 @@ baseurl = 'http://localhost:32400'
 token = 'xxxxxxxx'
 plex = PlexServer(baseurl, token)
 
-
 # Set all movies to use English non-forced subtitles if available, otherwise print no subtitles found
 for movie in plex.library.section('Movies').all():
     movie.reload()
@@ -29,7 +28,6 @@ for movie in plex.library.section('Movies').all():
         print(f'{movie.title}: No English subtitles found. No subtitle changes.')
     else:
         print(f'{movie.title}: No subtitle changes.')
-
 
 # Set all TV shows to use English non-forced subtitles if available, otherwise print no subtitles found
 for show in plex.library.section('TV Shows').all():
