@@ -1,6 +1,5 @@
 from plexapi.server import PlexServer
 import requests
-import xml.etree.ElementTree as ET
 
 # Connect to the Plex server
 baseurl = 'http://localhost:32400'
