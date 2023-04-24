@@ -10,9 +10,13 @@ plex = PlexServer(baseurl, token)
 # Set all movies to use English non-forced subtitles if available, otherwise print no subtitles found
 for movie in plex.library.section('Movies').all():
     movie.reload()
+    # Get all English subtitle streams for the current movie
     english_subs = [stream for stream in movie.subtitleStreams() if stream.languageCode == 'eng']
-    non_forced_english_subs = [stream for stream in english_subs if not stream.forced]
-    forced_english_subs = [stream for stream in english_subs if stream.forced]
+    # Filter out any English subtitle streams that are marked as forced
+    # or have the word "forced" in their title (case insensitive)
+    non_forced_english_subs = [stream for stream in english_subs if not stream.forced or (hasattr(stream, 'title') and stream.title is not None and 'forced' not in stream.title.lower())]
+    # Get all English subtitle streams that are marked as forced
+    forced_english_subs = [stream for stream in english_subs if stream.forced or (hasattr(stream, 'title') and stream.title is not None and 'forced' in stream.title.lower())]
     part = movie.media[0].parts[0]
     partsid = part.id
     if forced_english_subs and non_forced_english_subs:
@@ -35,9 +39,13 @@ for show in plex.library.section('TV Shows').all():
     for episode in show.episodes():
         show.reload()
         episode.reload()
+        # Get all English subtitle streams for the current show
         english_subs = [stream for stream in episode.subtitleStreams() if stream.languageCode == 'eng']
-        non_forced_english_subs = [stream for stream in english_subs if not stream.forced]
-        forced_english_subs = [stream for stream in english_subs if stream.forced]
+        # Filter out any English subtitle streams that are marked as forced
+        # or have the word "forced" in their title (case insensitive)
+        non_forced_english_subs = [stream for stream in english_subs if not stream.forced or (hasattr(stream, 'title') and stream.title is not None and 'forced' not in stream.title.lower())]
+        # Get all English subtitle streams that are marked as forced
+        forced_english_subs = [stream for stream in english_subs if stream.forced or (hasattr(stream, 'title') and stream.title is not None and 'forced' in stream.title.lower())]
         part = episode.media[0].parts[0]
         partsid = part.id
         if forced_english_subs and non_forced_english_subs:
