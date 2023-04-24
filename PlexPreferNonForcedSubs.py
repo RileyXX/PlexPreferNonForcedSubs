@@ -29,7 +29,6 @@ for movie in plex.library.section('Movies').all():
     else:
         print(f'{movie.title}: No subtitle changes.')
 
-
 # Set all TV shows to use English non-forced subtitles if available, otherwise print no subtitles found
 for show in plex.library.section('TV Shows').all():
     show.reload()
