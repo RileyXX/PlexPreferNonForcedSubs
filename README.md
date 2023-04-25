@@ -17,15 +17,13 @@ Forced subtitles only provide subtitles when the characters speak a foreign or a
 
 
 ## Instructions:
-##### Windows:
-To use this script on Windows. Simply install latest version of [Python](https://www.python.org/downloads/). 
-1. Download the latest .py script from the [releases](https://github.com/RileyXX/PlexDefaultSubtitleChanger/releases) page. 
-2. Replace `xxxxxxx` in the script with your [plex api token](https://www.plexopedia.com/plex-media-server/general/plex-token/).
-3. Install dependencies [plexapi](https://github.com/pkkid/python-plexapi) and [requests](https://pypi.org/project/requests/). To do this, run `python -m pip install plexapi requests` in command prompt.
-3. Make sure Plex media server is running locally then run the script and watch it work its magic.
+1. Install [Python](https://www.python.org/downloads/).
+2. Download the latest .py script from the [releases](https://github.com/RileyXX/PlexDefaultSubtitleChanger/releases) page. 
+3. Replace `xxxxxxx` in the script with your [plex api token](https://www.plexopedia.com/plex-media-server/general/plex-token/).
+4. Install dependency [plexapi](https://github.com/pkkid/python-plexapi). To do this, run `python -m pip install plexapi` in command prompt.
+5. Make sure Plex media server is running locally then run the script and watch it work its magic.
 
-##### Note:
-This script should work fine on any other operating system. No need to make any changes.
+_Note: This script should work on Windows, MacOS and Linux._
 
 ## Known issues/future outlook:
 * [Python-PlexAPI](https://python-plexapi.readthedocs.io/en/latest/modules/media.html#plexapi.media.MediaPart.setDefaultSubtitleStream) has a method to set the default subtitle stream. No need to manually call the API using requests. 
