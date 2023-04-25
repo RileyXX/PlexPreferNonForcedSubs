@@ -1,5 +1,5 @@
 from plexapi.server import PlexServer
-import requests
+from plexapi.media import SubtitleStream
 
 # Connect to Plex Media Server. Replace xxxxxxxx below with your Plex token. How to get token: https://www.plexopedia.com/plex-media-server/general/plex-token/
 baseurl = 'http://localhost:32400'
@@ -27,9 +27,7 @@ for section in plex.library.sections():
             part = movie.media[0].parts[0]
             partsid = part.id
             if forced_english_subs and non_forced_english_subs:
-                url = f'{baseurl}/library/parts/{partsid}?subtitleStreamID={non_forced_english_subs[0].id}&allParts=1'
-                headers = {'X-Plex-Token': token}
-                requests.put(url, headers=headers)
+                non_forced_english_subs[0].setDefault()
                 print(f'\033[92m{movie.title[:title_width].ljust(title_width)} | {str(movie.year).ljust(year_width)} | {"English (Non-Forced)".ljust(status_width)} | {"Y".ljust(changes_width)}\033[0m')
             elif non_forced_english_subs and not forced_english_subs:
                 print(f'{movie.title[:title_width].ljust(title_width)} | {str(movie.year).ljust(year_width)} | {"English".ljust(status_width)} | {"N".ljust(changes_width)}')
@@ -67,9 +65,7 @@ for section in plex.library.sections():
                 part = episode.media[0].parts[0]
                 partsid = part.id
                 if forced_english_subs and non_forced_english_subs:
-                    url = f'{baseurl}/library/parts/{partsid}?subtitleStreamID={non_forced_english_subs[0].id}&allParts=1'
-                    headers = {'X-Plex-Token': token}
-                    requests.put(url, headers=headers)
+                    non_forced_english_subs[0].setDefault()
                     print(f'\033[92m{show.title[:title_width].ljust(title_width)} | {str(show.year).ljust(year_width)} | {"Season " + str(episode.seasonNumber).ljust(season_row_width)} | {"Episode " + str(episode.index).ljust(episode_row_width)} | {"English (Non-Forced)".ljust(status_width)} | {"Y".ljust(changes_width)}\033[0m')
                 elif non_forced_english_subs and not forced_english_subs:
                     print(f'{show.title[:title_width].ljust(title_width)} | {str(show.year).ljust(year_width)} | {"Season " + str(episode.seasonNumber).ljust(season_row_width)} | {"Episode " + str(episode.index).ljust(episode_row_width)} | {"English".ljust(status_width)} | {"N".ljust(changes_width)}')
