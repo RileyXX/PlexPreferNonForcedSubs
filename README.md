@@ -26,7 +26,6 @@ Forced subtitles only provide subtitles when the characters speak a foreign or a
 _Note: This script should work on Windows, MacOS and Linux._
 
 ## Known issues/future outlook:
-* [Python-PlexAPI](https://python-plexapi.readthedocs.io/en/latest/modules/media.html#plexapi.media.MediaPart.setDefaultSubtitleStream) has a method to set the default subtitle stream. No need to manually call the API using requests. 
 * Several lines of redundant code can be shortened and/or removed
 
 ## Also posted on:
