@@ -7,14 +7,12 @@ token = 'xxxxxxxx'
 plex = PlexServer(baseurl, token)
 
 table_headers = ['Title', 'Year', 'Status', 'Changes']
-
 title_width = 70
 year_width = 5
 status_width = 20
 changes_width = 8
 
 print("\n" + "-" * 114 + "\nMovies\n" + "-" * 114)
-
 print(f'\033[1m\033[96m{" | ".join([h.ljust(title_width if i == 0 else year_width if i == 1 else status_width if i == 2 else changes_width) for i, h in enumerate(table_headers)])}\033[0m')
 
 for section in plex.library.sections():
@@ -38,7 +36,6 @@ for section in plex.library.sections():
 
 
 table_headers = ['Title', 'Year', 'Season #', 'Episode #', 'Status', 'Changes']
-
 title_width = 42
 year_width = 5
 season_width = 11
@@ -49,7 +46,6 @@ season_row_width = 4
 episode_row_width = 3
 
 print("\n" + "-" * 114 + "\nShows\n" + "-" * 114)
-
 print(f'\033[1m\033[96m{" | ".join([h.ljust(title_width if i == 0 else year_width if i == 1 else season_width if i == 2 else episode_width if i == 3 else status_width if i == 4 else changes_width) for i, h in enumerate(table_headers)])}\033[0m')
 
 for section in plex.library.sections():
