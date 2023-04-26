@@ -18,12 +18,15 @@ Forced subtitles only provide subtitles when the characters speak a foreign or a
 
 ## Instructions:
 1. Install [Python](https://www.python.org/downloads/).
-2. Download the latest .py script from the [releases](https://github.com/RileyXX/PlexDefaultSubtitleChanger/releases) page. 
-3. Replace `xxxxxxx` in the script with your [plex api token](https://www.plexopedia.com/plex-media-server/general/plex-token/).
-4. Install python dependency [plexapi](https://github.com/pkkid/python-plexapi). To do this, run `python -m pip install plexapi` in command prompt.
-5. Make sure Plex media server is running locally then run the script and watch it work its magic.
+2. Run `python -m pip install PlexPreferNonForcedSubs` in command line.
+3. Make sure Plex media server is running locally then run the script and watch it work its magic.
 
 _Note: This script should work on any OS where Python is installed (Windows, MacOS and Linux etc)._
+
+#### Update PlexPreferNonForcedSubs:
+run `python -m pip install PlexPreferNonForcedSubs --upgrade` in command line.
+#### Uninstall PlexPreferNonForcedSubs:
+run `python -m pip uninstall PlexPreferNonForcedSubs` in command line.
 
 ## Known issues/future outlook:
 * Several lines of redundant code can be shortened and/or removed
@@ -47,4 +50,8 @@ Like my scripts? Become a [sponsor](https://github.com/sponsors/RileyXX) and sup
 - Venmo: `@rileyxx`
 - Bitcoin: `bc1qrjevwqv49z8y77len3azqfghxrjmrjvhy5zqau`
 - Amazon Wishlist: [Link ↗](https://www.amazon.com/hz/wishlist/ls/WURF5NWZ843U)
+
+<br>
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
