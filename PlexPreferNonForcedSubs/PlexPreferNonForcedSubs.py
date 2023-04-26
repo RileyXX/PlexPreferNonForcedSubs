@@ -12,6 +12,7 @@ except FileNotFoundError:
 
 if token == 'PLEX_TOKEN':
     # Prompt user to enter Plex token
+    print(f'How to get your Plex token: https://www.plexopedia.com/plex-media-server/general/plex-token/\n')
     token = input("Enter your Plex token: ")
     # Save token to token.txt in the same folder as the script
     with open('token.txt', 'w') as f:
