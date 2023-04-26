@@ -1,7 +1,7 @@
 from plexapi.server import PlexServer
 from plexapi.media import SubtitleStream
 
-# Connect to Plex Media Server. Replace xxxxxxxx below with your Plex token. How to get token: https://www.plexopedia.com/plex-media-server/general/plex-token/
+# Connect to Plex Media Server. Replace PLEX_TOKEN below with your Plex token. How to get token: https://www.plexopedia.com/plex-media-server/general/plex-token/
 baseurl = 'http://localhost:32400'
 token = 'PLEX_TOKEN'
 try:
