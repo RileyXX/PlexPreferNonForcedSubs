@@ -33,6 +33,11 @@ _Note: This script should work on any OS where Python is installed (Windows, Mac
 ### Uninstall:
 `python -m pip uninstall PlexPreferNonForcedSubs` in command line.
 
+## Alternative manual install method:
+1. Download the latest .py script from the [releases page](https://github.com/RileyXX/PlexPreferNonForcedSubs/releases) and move it to the file directory of your choice.
+2. Run the script. On first run the script will ask you to fill in your [Plex token](https://www.plexopedia.com/plex-media-server/general/plex-token/). Your token will be saved locally in the same folder as token.txt.
+3. Done
+
 ## Known issues/future outlook:
 * Several lines of redundant code can be shortened and/or removed
 
