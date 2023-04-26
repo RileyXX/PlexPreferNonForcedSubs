@@ -20,10 +20,10 @@ Forced subtitles only provide subtitles when the characters speak a foreign or a
 1. Install [Python](https://www.python.org/downloads/).
 2. Download the latest .py script from the [releases](https://github.com/RileyXX/PlexDefaultSubtitleChanger/releases) page. 
 3. Replace `xxxxxxx` in the script with your [plex api token](https://www.plexopedia.com/plex-media-server/general/plex-token/).
-4. Install dependency [plexapi](https://github.com/pkkid/python-plexapi). To do this, run `python -m pip install plexapi` in command prompt.
+4. Install python dependency [plexapi](https://github.com/pkkid/python-plexapi). To do this, run `python -m pip install plexapi` in command prompt.
 5. Make sure Plex media server is running locally then run the script and watch it work its magic.
 
-_Note: This script should work on Windows, MacOS and Linux._
+_Note: This script should work on any OS where Python is installed (Windows, MacOS and Linux etc)._
 
 ## Known issues/future outlook:
 * Several lines of redundant code can be shortened and/or removed
