@@ -2,7 +2,7 @@
 
 
 ## Short description:
-This python script will set all movies and shows in your local Plex library to English non forced subtitles by default. The subtitle selections will apply to your Plex profile and be remembered on other devices.
+This python script will set all movies and shows in your local Plex library to English non forced subtitles by default. The subtitle selections will apply to your Plex profile and be remembered on other devices. This script should work on any OS where Python is installed (Windows, MacOS and Linux etc).
 
 ## Long description:
 This script was created with the help of [ChatGPT Open AI](https://chat.openai.com/chat) and further edited and completed by me. It uses [Plex Python Api](https://python-plexapi.readthedocs.io/en/latest/). It will set all movies and shows in your local Plex library to English non forced subtitles by default. The subtitle selections will apply to your Plex profile and be remembered on other devices. Assuming your Plex subtitles settings are setup in your server settings Plex will default to Forced Subtitles by default when they are available for a given item. Plex will not allow you to prefer non forced subtitles natively hence why this script was created.
@@ -21,9 +21,9 @@ Forced subtitles only provide subtitles when the characters speak a foreign or a
 2. Run `python -m pip install PlexPreferNonForcedSubs` in command line.
 3. Make sure Plex media server is running then run the script using `PlexPreferNonForcedSubs` in command line.
 4. On first run the script will ask you to fill in your [Plex token](https://www.plexopedia.com/plex-media-server/general/plex-token/). Your token will be saved locally in the same folder as token.txt.
-5. Done
+5. Done.
 
-_Note: This script should work on any OS where Python is installed (Windows, MacOS and Linux etc)._
+_See [below](https://github.com/RileyXX/PlexPreferNonForcedSubs#run) for details on how to run, update and uninstall._
 
 ### Run:
 `PlexPreferNonForcedSubs` in command line.
@@ -33,10 +33,13 @@ _Note: This script should work on any OS where Python is installed (Windows, Mac
 ### Uninstall:
 `python -m pip uninstall PlexPreferNonForcedSubs` in command line.
 
-## Alternative manual install method:
+## Alternative manual no install method:
 1. Download the latest .py script from the [releases page](https://github.com/RileyXX/PlexPreferNonForcedSubs/releases) and move it to the file directory of your choice.
-2. Run the script. On first run the script will ask you to fill in your [Plex token](https://www.plexopedia.com/plex-media-server/general/plex-token/). Your token will be saved locally in the same folder as token.txt.
-3. Done
+2. Run the script. Run `PlexPreferNonForcedSubs.py` OR open terminal and navigate to folder where `PlexPreferNonForcedSubs.py` is located. Run `PlexPreferNonForcedSubs.py` in terminal. 
+4. On first run the script will ask you to fill in your [Plex token](https://www.plexopedia.com/plex-media-server/general/plex-token/). Your token will be saved locally in the same folder as token.txt.
+3. Done.
+
+_See [above](https://github.com/RileyXX/PlexPreferNonForcedSubs#run) for details on how to run, update and uninstall._
 
 ## Known issues/future outlook:
 * Several lines of redundant code can be shortened and/or removed
