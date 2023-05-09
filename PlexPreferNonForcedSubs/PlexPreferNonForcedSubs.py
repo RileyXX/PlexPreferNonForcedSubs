@@ -1,4 +1,5 @@
 from plexapi.server import PlexServer
+from plexapi.media import SubtitleStream
 import os
 
 def main():
