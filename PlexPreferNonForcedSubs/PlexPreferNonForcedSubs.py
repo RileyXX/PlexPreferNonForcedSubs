@@ -1,16 +1,14 @@
 from plexapi.server import PlexServer
-from plexapi.media import SubtitleStream
 import os
 
 def main():
-    
     # Connect to Plex Media Server. Replace PLEX_TOKEN below with your Plex token. How to get token: https://www.plexopedia.com/plex-media-server/general/plex-token/
     baseurl = 'http://localhost:32400'
     token = 'PLEX_TOKEN'
-    
+
     script_dir = os.path.dirname(os.path.abspath(__file__))
     token_file = os.path.join(script_dir, 'token.txt')
-    
+
     try:
         with open(token_file, 'r') as f:
             token = f.read().strip()
@@ -25,6 +23,7 @@ def main():
 
     plex = PlexServer(baseurl, token)
 
+    # Movies
     table_headers = ['Title', 'Year', 'Status', 'Changes']
     title_width = 70
     year_width = 5
@@ -37,23 +36,24 @@ def main():
     for section in plex.library.sections():
         if section.type == 'movie':
             for movie in section.all():
-                movie.reload()
-                english_subs = [stream for stream in movie.subtitleStreams() if stream.languageCode == 'eng']
-                non_forced_english_subs = [stream for stream in english_subs if not stream.forced or (hasattr(stream, 'title') and stream.title is not None and 'forced' not in stream.title.lower())]
-                forced_english_subs = [stream for stream in english_subs if stream.forced or (hasattr(stream, 'title') and stream.title is not None and 'forced' in stream.title.lower())]
-                part = movie.media[0].parts[0]
-                partsid = part.id
-                if forced_english_subs and non_forced_english_subs:
-                    non_forced_english_subs[0].setDefault()
-                    print(f'\033[92m{movie.title[:title_width].ljust(title_width)} | {str(movie.year).ljust(year_width)} | {"English (Non-Forced)".ljust(status_width)} | {"Y".ljust(changes_width)}\033[0m')
-                elif non_forced_english_subs and not forced_english_subs:
-                    print(f'{movie.title[:title_width].ljust(title_width)} | {str(movie.year).ljust(year_width)} | {"English".ljust(status_width)} | {"N".ljust(changes_width)}')
-                elif not non_forced_english_subs and not forced_english_subs:
-                    print(f'\033[91m{movie.title[:title_width].ljust(title_width)} | {str(movie.year).ljust(year_width)} | {"No Subtitles Found".ljust(status_width)} | {"N".ljust(changes_width)}\033[0m')
-                else:
-                    print(f'\033[91m{movie.title[:title_width].ljust(title_width)} | {str(movie.year).ljust(year_width)} | {"English (Forced)".ljust(status_width)} | {"N (Error)".ljust(changes_width)}\033[0m')
+                english_subs = movie.subtitleStreams()
+                if english_subs is not None:
+                    english_subs = [stream for stream in english_subs if stream is not None and stream.languageCode == 'eng']
+                    non_forced_english_subs = [stream for stream in english_subs if stream is not None and (not stream.forced or ('forced' not in getattr(stream, 'title', '').lower()))]
+                    forced_english_subs = [stream for stream in english_subs if stream is not None and (hasattr(stream, 'title') and stream.title is not None and 'forced' in stream.title.lower())]
+                    part = movie.media[0].parts[0]
+                    partsid = part.id
+                    if forced_english_subs and non_forced_english_subs:
+                        non_forced_english_subs[0].setDefault()
+                        print(f'\033[92m{movie.title[:title_width].ljust(title_width)} | {str(movie.year).ljust(year_width)} | {"English (Non-Forced)".ljust(status_width)} | {"Y".ljust(changes_width)}\033[0m')
+                    elif non_forced_english_subs and not forced_english_subs:
+                        print(f'{movie.title[:title_width].ljust(title_width)} | {str(movie.year).ljust(year_width)} | {"English".ljust(status_width)} | {"N".ljust(changes_width)}')
+                    elif not non_forced_english_subs and not forced_english_subs:
+                        print(f'\033[91m{movie.title[:title_width].ljust(title_width)} | {str(movie.year).ljust(year_width)} | {"No Subtitles Found".ljust(status_width)} | {"N".ljust(changes_width)}\033[0m')
+                    else:
+                        print(f'\033[91m{movie.title[:title_width].ljust(title_width)} | {str(movie.year).ljust(year_width)} | {"English (Forced)".ljust(status_width)} | {"N (Error)".ljust(changes_width)}\033[0m')
 
-
+    # Shows
     table_headers = ['Title', 'Year', 'Season #', 'Episode #', 'Status', 'Changes']
     title_width = 42
     year_width = 5
@@ -70,25 +70,23 @@ def main():
     for section in plex.library.sections():
         if section.type == 'show':
             for show in section.all():
-                show.reload()
                 for episode in show.episodes():
-                    show.reload()
-                    episode.reload()
-                    english_subs = [stream for stream in episode.subtitleStreams() if stream.languageCode == 'eng']
-                    non_forced_english_subs = [stream for stream in english_subs if not stream.forced or (hasattr(stream, 'title') and stream.title is not None and 'forced' not in stream.title.lower())]
-                    forced_english_subs = [stream for stream in english_subs if stream.forced or (hasattr(stream, 'title') and stream.title is not None and 'forced' in stream.title.lower())]
-                    part = episode.media[0].parts[0]
-                    partsid = part.id
-                    if forced_english_subs and non_forced_english_subs:
-                        non_forced_english_subs[0].setDefault()
-                        print(f'\033[92m{show.title[:title_width].ljust(title_width)} | {str(show.year).ljust(year_width)} | {"Season " + str(episode.seasonNumber).ljust(season_row_width)} | {"Episode " + str(episode.index).ljust(episode_row_width)} | {"English (Non-Forced)".ljust(status_width)} | {"Y".ljust(changes_width)}\033[0m')
-                    elif non_forced_english_subs and not forced_english_subs:
-                        print(f'{show.title[:title_width].ljust(title_width)} | {str(show.year).ljust(year_width)} | {"Season " + str(episode.seasonNumber).ljust(season_row_width)} | {"Episode " + str(episode.index).ljust(episode_row_width)} | {"English".ljust(status_width)} | {"N".ljust(changes_width)}')
-                    elif not non_forced_english_subs and not forced_english_subs and not forced_english_subs:
-                        print(f'\033[91m{show.title[:title_width].ljust(title_width)} | {str(show.year).ljust(year_width)} | {"Season " + str(episode.seasonNumber).ljust(season_row_width)} | {"Episode " + str(episode.index).ljust(episode_row_width)} | {"No Subtitles Found".ljust(status_width)} | {"N".ljust(changes_width)}\033[0m')
-                    else:
-                        print(f'\033[91m{show.title[:title_width].ljust(title_width)} | {str(show.year).ljust(year_width)} | {"Season " + str(episode.seasonNumber).ljust(season_row_width)} | {"Episode " + str(episode.index).ljust(episode_row_width)} | {"English (Forced)".ljust(status_width)} | {"N (Error)".ljust(changes_width)}\033[0m')
-
+                    english_subs = episode.subtitleStreams()
+                    if english_subs is not None:
+                        english_subs = [stream for stream in english_subs if stream is not None and stream.languageCode == 'eng']
+                        non_forced_english_subs = [stream for stream in english_subs if stream is not None and (not stream.forced or ('forced' not in getattr(stream, 'title', '').lower()))]
+                        forced_english_subs = [stream for stream in english_subs if stream is not None and (hasattr(stream, 'title') and stream.title is not None and 'forced' in stream.title.lower())]
+                        part = episode.media[0].parts[0]
+                        partsid = part.id
+                        if forced_english_subs and non_forced_english_subs:
+                            non_forced_english_subs[0].setDefault()
+                            print(f'\033[92m{show.title[:title_width].ljust(title_width)} | {str(show.year).ljust(year_width)} | {"Season " + str(episode.seasonNumber).ljust(season_row_width)} | {"Episode " + str(episode.index).ljust(episode_row_width)} | {"English (Non-Forced)".ljust(status_width)} | {"Y".ljust(changes_width)}\033[0m')
+                        elif non_forced_english_subs and not forced_english_subs:
+                            print(f'{show.title[:title_width].ljust(title_width)} | {str(show.year).ljust(year_width)} | {"Season " + str(episode.seasonNumber).ljust(season_row_width)} | {"Episode " + str(episode.index).ljust(episode_row_width)} | {"English".ljust(status_width)} | {"N".ljust(changes_width)}')
+                        elif not non_forced_english_subs and not forced_english_subs:
+                            print(f'\033[91m{show.title[:title_width].ljust(title_width)} | {str(show.year).ljust(year_width)} | {"Season " + str(episode.seasonNumber).ljust(season_row_width)} | {"Episode " + str(episode.index).ljust(episode_row_width)} | {"No Subtitles Found".ljust(status_width)} | {"N".ljust(changes_width)}\033[0m')
+                        else:
+                            print(f'\033[91m{show.title[:title_width].ljust(title_width)} | {str(show.year).ljust(year_width)} | {"Season " + str(episode.seasonNumber).ljust(season_row_width)} | {"Episode " + str(episode.index).ljust(episode_row_width)} | {"English (Forced)".ljust(status_width)} | {"N (Error)".ljust(changes_width)}\033[0m')
 
 if __name__ == '__main__':
     main()
