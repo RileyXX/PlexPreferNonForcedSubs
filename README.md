@@ -45,8 +45,9 @@ _See [above](https://github.com/RileyXX/PlexPreferNonForcedSubs#run) for details
 * Several lines of redundant code can be shortened and/or removed
 
 ## Also posted on:
-* [Stackoverflow](https://stackoverflow.com/q/75027919/9196825)
+* [PyPi](https://pypi.org/project/PlexPreferNonForcedSubs/)
 * [Reddit](https://www.reddit.com/r/PleX/comments/105gdh7/python_code_to_set_all_movies_and_shows_in_plex/)
+* [Stackoverflow](https://stackoverflow.com/q/75027919/9196825)
 * [Plex Forums](https://forums.plex.tv/t/python-script-to-set-all-movies-and-shows-in-plex-to-use-english-non-forced-subtitles/825871)
 
 ## Screenshots:
