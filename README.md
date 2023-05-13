@@ -33,11 +33,12 @@ _See [below](https://github.com/RileyXX/PlexPreferNonForcedSubs#run) for details
 ### Uninstall:
 `python -m pip uninstall PlexPreferNonForcedSubs` in command line.
 
-## Alternative manual no install method:
-1. Download the latest .py script from the [releases page](https://github.com/RileyXX/PlexPreferNonForcedSubs/releases) and move it to the file directory of your choice.
-2. Run the script by running `PlexPreferNonForcedSubs.py` OR open terminal and navigate to folder where `PlexPreferNonForcedSubs.py` is located. Run `PlexPreferNonForcedSubs.py` in terminal. 
+## Alternative manual no pip install method:
+1. Install [Python](https://www.python.org/downloads/).
+2. Download the latest .py script from the [releases page](https://github.com/RileyXX/PlexPreferNonForcedSubs/releases) and move it to the file directory of your choice.
+3. Run the script by running `PlexPreferNonForcedSubs.py` OR open terminal and navigate to folder where `PlexPreferNonForcedSubs.py` is located. Run `PlexPreferNonForcedSubs.py` in terminal. 
 4. On first run the script will ask you to fill in your [Plex token](https://www.plexopedia.com/plex-media-server/general/plex-token/). Your token will be saved locally in the same folder as token.txt.
-3. Done.
+5. Done.
 
 _See [above](https://github.com/RileyXX/PlexPreferNonForcedSubs#run) for details on how to run, update and uninstall._
 
