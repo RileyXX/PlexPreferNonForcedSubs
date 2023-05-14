@@ -43,7 +43,7 @@ _See [below](https://github.com/RileyXX/PlexPreferNonForcedSubs#run) for details
 _See [above](https://github.com/RileyXX/PlexPreferNonForcedSubs#run) for details on how to run, update and uninstall._
 
 ## Known issues/future outlook:
-* Several lines of redundant code can be shortened and/or removed
+* Several lines of redundant code can be shortened and/or removed https://github.com/RileyXX/PlexPreferNonForcedSubs/issues/4
 
 ## Also posted on:
 * [PyPi](https://pypi.org/project/PlexPreferNonForcedSubs/)
