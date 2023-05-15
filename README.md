@@ -32,6 +32,8 @@ _See [below](https://github.com/RileyXX/PlexPreferNonForcedSubs#run) for details
 `python -m pip install PlexPreferNonForcedSubs --upgrade` in command line.
 ### Uninstall:
 `python -m pip uninstall PlexPreferNonForcedSubs` in command line.
+### Install specific version:
+`python -m pip install PlexPreferNonForcedSubs==VERSION_NUMBER` in command line. Replace `VERSION_NUMBER` with your [desired version](https://github.com/RileyXX/PlexPreferNonForcedSubs/releases).
 
 ## Alternative manual no pip install method:
 1. Install [Python](https://www.python.org/downloads/).
