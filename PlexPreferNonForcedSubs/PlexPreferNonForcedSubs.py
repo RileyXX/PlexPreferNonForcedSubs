@@ -17,6 +17,7 @@ def report_error(error_message):
     print("-" * 50)
 
 def main():
+    try:
         # Connect to Plex Media Server. Replace PLEX_TOKEN below with your Plex token. How to get token: https://www.plexopedia.com/plex-media-server/general/plex-token/
         baseurl = 'http://localhost:32400'
         token = 'PLEX_TOKEN'
