@@ -11,7 +11,7 @@ body:
         required: true
 - type: textarea
   attributes:
-    label: Description
+    label: Feature Request
     description: A clear and concise description the feature you would like to see implemented.
   validations:
     required: true
