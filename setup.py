@@ -18,6 +18,7 @@ LONG_DESCRIPTION = 'This python script will set all movies and shows in your loc
 setup(
     name="PlexPreferNonForcedSubs",
     version=VERSION,
+    author="RileyXX",
     description=DESCRIPTION,
     long_description_content_type="text/markdown",
     long_description=long_description,
