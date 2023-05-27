@@ -4,7 +4,7 @@ import os
 import traceback
 
 def report_error(error_message):
-    github_issue_url = "https://github.com/RileyXX/PlexPreferNonForcedSubs/issues/new?assignees=&labels=&projects=&template=bug_report.yml"
+    github_issue_url = "https://github.com/RileyXX/PlexPreferNonForcedSubs/issues/new?template=bug_report.yml"
     traceback_info = traceback.format_exc()
 
     print("\n--- ERROR ---")
@@ -55,8 +55,8 @@ def main():
                     english_subs = movie.subtitleStreams()
                     if english_subs is not None:
                         english_subs = [stream for stream in english_subs if stream is not None and stream.languageCode == 'eng']
-                        non_forced_english_subs = [stream for stream in english_subs if stream is not None and (not stream.forced or ('forced' not in getattr(stream, 'title', '').lower()))]
-                        forced_english_subs = [stream for stream in english_subs if stream is not None and (hasattr(stream, 'title') and stream.title is not None and 'forced' in stream.title.lower())]
+                        non_forced_english_subs = [stream for stream in english_subs if stream is not None and (not stream.forced or (hasattr(stream, 'title') and 'forced' not in (getattr(stream, 'title', '') or '').lower()))]
+                        forced_english_subs = [stream for stream in english_subs if stream is not None and (stream.forced or (hasattr(stream, 'title') and 'forced' in (getattr(stream, 'title', '') or '').lower()))]
                         part = movie.media[0].parts[0]
                         partsid = part.id
                         if forced_english_subs and non_forced_english_subs:
@@ -90,8 +90,8 @@ def main():
                         english_subs = episode.subtitleStreams()
                         if english_subs is not None:
                             english_subs = [stream for stream in english_subs if stream is not None and stream.languageCode == 'eng']
-                            non_forced_english_subs = [stream for stream in english_subs if stream is not None and (not stream.forced or ('forced' not in getattr(stream, 'title', '').lower()))]
-                            forced_english_subs = [stream for stream in english_subs if stream is not None and (hasattr(stream, 'title') and stream.title is not None and 'forced' in stream.title.lower())]
+                            non_forced_english_subs = [stream for stream in english_subs if stream is not None and (not stream.forced or (hasattr(stream, 'title') and 'forced' not in (getattr(stream, 'title', '') or '').lower()))]
+                            forced_english_subs = [stream for stream in english_subs if stream is not None and (stream.forced or (hasattr(stream, 'title') and 'forced' in (getattr(stream, 'title', '') or '').lower()))]
                             part = episode.media[0].parts[0]
                             partsid = part.id
                             if forced_english_subs and non_forced_english_subs:
@@ -106,7 +106,7 @@ def main():
 
     except Exception as e:
         error_message = "An error occurred while running the script."
-        errorHandling.report_error(error_message)
+        report_error(error_message)
 
 if __name__ == '__main__':
     main()
