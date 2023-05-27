@@ -21,7 +21,7 @@ body:
 - type: textarea
   attributes:
     label: Environment
-    description: Please provide the details of the system IMDB-Trakt-Syncer is running on and the method you are using to run the script.
+    description: Please provide the details of the system PlexPreferNonForcedSubs is running on and the method you are using to run the script.
     placeholder: |
       OS: Windows 10 or 11/Linux/macOS etc
       Using pip install method: yes
