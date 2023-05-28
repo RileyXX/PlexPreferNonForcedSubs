@@ -1,12 +1,14 @@
 # PlexPreferNonForcedSubs
 
 ## Short Description
-This Python script sets all movies and shows in your local Plex library to English non-forced subtitles by default. It designed to work on Python 3.5 or later and compatible on any operating system where Python is installed (Windows, macOS, Linux, etc).
+This Python script sets all movies and shows in your local Plex library to English non-forced subtitles by default. It designed to work on Python 3.5 or later and compatible on any operating system where [Python](https://www.python.org/downloads/) is installed (Windows, macOS, Linux, etc).
 
 ## Long Description
-This script utilizes the Plex Python API and sets all movies and shows in your local Plex library to English non-forced subtitles by default. The subtitle preferences will be applied to your Plex profile and remembered on other devices. By default, Plex prefers forced subtitles when available for a given item. However, Plex does not natively allow you to prefer non-forced subtitles, which is why this script was created.
+This script utilizes [Plex Python API](https://github.com/pkkid/python-plexapi) and sets all movies and shows in your local Plex library to English non-forced subtitles by default. The subtitle preferences will be applied to your Plex profile and remembered on other devices. By default, Plex prefers forced subtitles when available for a given item. However, Plex does not natively allow you to prefer non-forced subtitles, which is why this script was created.
 
-The script has been thoroughly tested and confirmed to be working. Feel free to use the code for your own purposes. I will be running this code periodically on my home server along with some other Plex scripts, such as [Plex Auto Delete](https://github.com/Casvt/Plex-scripts/blob/main/changing_settings/plex_auto_delete.py). Special thanks to everyone who provided assistance! If you encounter any bugs while using this script, please open an issue. Cheers!
+The script has been thoroughly tested and confirmed to be working. Feel free to use the code for your own purposes. I will be running this script periodically on my home server along with some other cool scripts. If you're interested, see below for my other [recommended projects](https://github.com/RileyXX/PlexPreferNonForcedSubs#other-recommended-projects). 
+
+If you encounter any bugs while using this script, please open an [issue](https://github.com/RileyXX/PlexPreferNonForcedSubs/issues) so it can be properly investigated.
 
 ## What are "non-forced" subtitles?
 Non-forced subtitles provide subtitles everytime a characters speaks.
