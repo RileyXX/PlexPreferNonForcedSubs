@@ -4,7 +4,7 @@
 This Python script sets all movies and shows in your local Plex library to English non-forced subtitles by default. It designed to work on Python 3.5 or later and compatible on any operating system where [Python](https://www.python.org/downloads/) is installed (Windows, macOS, Linux, etc).
 
 ## Long Description
-This script utilizes [Plex Python API](https://github.com/pkkid/python-plexapi) and sets all movies and shows in your local Plex library to English non-forced subtitles by default. The subtitle preferences will be applied to your Plex profile and remembered on other devices. By default, Plex prefers forced subtitles when available for a given item. However, Plex does not natively allow you to prefer non-forced subtitles, which is why this script was created.
+This script utilizes [Plex Python API](https://github.com/pkkid/python-plexapi) and sets all movies and shows in your local Plex library to English non-forced subtitles by default. The subtitle preferences will be applied to your Plex profile and remembered on other devices. By default, Plex prefers forced subtitles when available for a given item. However, Plex does not natively allow you to prefer non-forced subtitles, which is why this script was created. 
 
 The script has been thoroughly tested and confirmed to be working. Feel free to use the code for your own purposes. I will be running this script periodically on my home server along with some other cool scripts. If you're interested, see below for my other [recommended projects](https://github.com/RileyXX/PlexPreferNonForcedSubs#other-recommended-projects). 
 
@@ -22,6 +22,7 @@ Forced subtitles only provide subtitles when the characters speak a foreign or a
 3. Ensure that your Plex media server is running, then run the script using `PlexPreferNonForcedSubs` in the command line.
 4. On the first run, the script will prompt you to enter your [Plex token](https://www.plexopedia.com/plex-media-server/general/plex-token/). The token will be saved locally in the same folder as `token.txt`.
 5. Done, setup complete. The script will continue to run and set all movies and shows in your local Plex library to use English non-forced subtitles.
+6. (Optional) If you have not yet setup your preferred subtitle settings in Plex, it is recommended to do so if you want English subs always enabled when available. To avoid overriding manual subtitle selection, the script will not set subtitle tracks to English when the subtitle tracks are set to Off or None. To change your default subtitle settings in Plex, navigate to [Plex Settings](https://app.plex.tv/desktop/#!/settings/account) > Account > Audio & Subtitle Settings > Set your preferred subtitle language to "English" and "Always Enabled". See [screenshot](https://user-images.githubusercontent.com/49823202/241563899-7e6b69d3-52c9-40f2-8386-20d3bd5c04b0.png).
 
 See the section below for instructions on how to run, update, and uninstall the script.
 
