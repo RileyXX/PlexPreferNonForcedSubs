@@ -1,7 +1,7 @@
 # PlexPreferNonForcedSubs
 
 ## Short Description
-This Python script sets all movies and shows in your local Plex library to English non-forced subtitles by default. It designed to work on Python 3.5 or later and compatible on any operating system where [Python](https://www.python.org/downloads/) is installed (Windows, macOS, Linux, etc).
+This Python script sets all movies and shows in your local Plex library to English non-forced subtitles by default. Please note, this script does not download subtitles, it simply changes the default track for existing subs in your library. It designed to work on Python 3.5 or later and compatible on any operating system where [Python](https://www.python.org/downloads/) is installed (Windows, macOS, Linux, etc).
 
 ## Long Description
 This script utilizes [Plex Python API](https://github.com/pkkid/python-plexapi) and sets all movies and shows in your local Plex library to English non-forced subtitles by default. The subtitle preferences will be applied to your Plex profile and remembered on other devices. By default, Plex prefers forced subtitles when available for a given item. However, Plex does not natively allow you to prefer non-forced subtitles, which is why this script was created. 
