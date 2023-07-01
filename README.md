@@ -62,10 +62,13 @@ _Replace `VERSION_NUMBER` with your [desired version](https://github.com/RileyXX
 
 See the section above for instructions on how to run, update, and uninstall the script.
 
+## Preferring Non-Forced English SDH Subtitles (for the Deaf or Hard-of-Hearing):
+- Looking for a script to prefer SDH subtitles? See discussion: [Preferring Non-Forced English SDH subtitles](https://github.com/RileyXX/PlexPreferNonForcedSubs/discussions/20).
+
 ## Known Issues/Future Outlook
 - Some lines of redundant code can be shortened and/or removed. Refer to [this issue](https://github.com/RileyXX/PlexPreferNonForcedSubs/issues/4) for more details.
 
-## Also Posted On
+## Also Posted On:
 - [PyPi](https://pypi.org/project/PlexPreferNonForcedSubs/)
 - [Reddit](https://www.reddit.com/r/PleX/comments/13ttswd/tool_for_setting_default_subtitles_to_english/)
 - [Stack Overflow](https://stackoverflow.com/q/75027919/9196825)
