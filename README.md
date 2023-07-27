@@ -17,7 +17,7 @@ Non-forced subtitles provide subtitles everytime a characters speaks.
 Forced subtitles only provide subtitles when the characters speak a foreign or alien language.
 
 ## Installation Instructions
-1. Install [Python](https://www.python.org/downloads/) (v3.5 or later).
+1. Install [Python](https://www.python.org/downloads/) (v3.5 or later). During installation, make sure to tick the box for adding Python to your PATH variable when prompted.
 2. Install the script by executing the following in the command line: `python -m pip install PlexPreferNonForcedSubs`.
 3. Ensure that your Plex media server is running, then run the script using `PlexPreferNonForcedSubs` in the command line.
 4. On the first run, the script will prompt you to enter your [Plex token](https://www.plexopedia.com/plex-media-server/general/plex-token/). The token will be saved locally in the same folder as `token.txt`.
