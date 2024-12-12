@@ -84,10 +84,9 @@ See the section above for instructions on how to run, update, and uninstall the 
 If you find my scripts helpful, you can become a [sponsor](https://github.com/sponsors/RileyXX) and support my projects! If you need help with a project, open an issue, and I'll do my best to assist you. For other inquiries and custom projects, you can contact me on [Twitter](https://twitter.com/RileyxBell).
 
 #### More Donation Options:
-- Cashapp: `$rileyxx`
-- Venmo: `@rileyxx`
+- Cashapp: [$rileyxx](https://cash.app/$rileyxx/)
+- Venmo: [@rileyxx](https://account.venmo.com/u/rileyxx)
 - Bitcoin: `bc1qrjevwqv49z8y77len3azqfghxrjmrjvhy5zqau`
-- Amazon Wishlist: [Link ↗](https://www.amazon.com/hz/wishlist/ls/WURF5NWZ843U)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
